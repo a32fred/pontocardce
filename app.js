@@ -1,37 +1,31 @@
-const { createServer } = require("http");
+const { createServer } = require("https"); // Alterado para HTTPS
 const next = require("next");
-const port = process.env.PORT || 21036;
+const fs = require("fs");
+const path = require("path");
 
-// Configurar modo de desenvolvimento
-const dev = process.env.NODE_ENV !== 'production';
-const app = next({ dev });
+// Função para carregar certificados (ajuste o caminho conforme sua pasta)
+const loadSSLOptions = () => {
+  const certPath = path.join(__dirname, "certificado", "pontocardce.com.br.pem");
+  const pemContent = fs.readFileSync(certPath, "utf8");
+  
+  return {
+    key: pemContent,
+    cert: pemContent
+  };
+};
 
+// Configurações
+const port = 21036; // Mantida fixa conforme a KingHost
+const sslOptions = loadSSLOptions();
+const app = next({ dev: false });
 const handle = app.getRequestHandler();
 
+// Inicia o servidor HTTPS
 app.prepare().then(() => {
-  createServer((req, res) => {
-    try {
-      handle(req, res);
-    } catch (error) {
-      console.error('Erro no servidor:', error);
-      res.statusCode = 500;
-      res.end('Erro interno do servidor');
-    }
+  createServer(sslOptions, (req, res) => { // Adicionadas opções SSL
+    handle(req, res);
   }).listen(port, (err) => {
-    if (err) {
-      console.error('Erro ao iniciar o servidor:', err);
-      process.exit(1);
-    }
-    console.log(`✅ Servidor rodando na porta ${port}`);
-    console.log(`Modo de desenvolvimento: ${dev}`);
+    if (err) throw err;
+    console.log(`Servidor HTTPS rodando na porta ${port}`);
   });
-}).catch((err) => {
-  console.error('Erro ao preparar aplicação Next.js:', err);
-  process.exit(1);
-});
-
-// Tratamento de encerramento graciosos
-process.on('SIGTERM', () => {
-  console.log('Recebendo sinal de encerramento. Finalizando servidor...');
-  process.exit(0);
 });
