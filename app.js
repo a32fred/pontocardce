@@ -2,7 +2,7 @@ const { createServer } = require("https"); // Alterado para HTTPS
 const next = require("next");
 const fs = require("fs");
 const path = require("path");
-
+/*
 // Função para carregar certificados (ajuste o caminho conforme sua pasta)
 const loadSSLOptions = () => {
   const certPath = path.join(__dirname, "certificado", "pontocardce.com.br.pem");
@@ -13,9 +13,9 @@ const loadSSLOptions = () => {
     cert: pemContent
   };
 };
-
+*/
 // Configurações
-const port = 21036; // Mantida fixa conforme a KingHost
+const port = 3000; // Mantida fixa conforme a KingHost
 const sslOptions = loadSSLOptions();
 const app = next({ dev: false });
 const handle = app.getRequestHandler();
