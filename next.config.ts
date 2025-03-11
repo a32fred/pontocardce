@@ -42,6 +42,10 @@ const nextConfig = {
     ],
   },
 
+
+  experimental: {
+    incrementalCache: true,
+  },
   // Configurações para hospedagem compartilhada
   output: 'standalone', // Gera pasta independente com todas dependências
   trailingSlash: true, // Melhora compatibilidade com servidores estáticos
