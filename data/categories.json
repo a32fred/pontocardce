@@ -113,6 +113,20 @@
     "label": "Relógio de Ponto",
     "products": [
       {
+        "id": "inner-rep-plus-topdata",
+        "name": "Inner Rep Plus Topdata",
+        "description": "Relógio de ponto com funcionalidades avançadas.",
+        "image": "/INNERREPPLUS.png",
+        "details": "Integração com sistemas de RH, gerenciamento de jornada e relatórios detalhados."
+      },
+      {
+        "id": "inner-ponto-4-topdata",
+        "name": "Inner Ponto 4 Topdata",
+        "description": "Relógio de ponto robusto para alta demanda.",
+        "image": "/INNERPONTO4.png",
+        "details": "Oferece precisão e confiabilidade, ideal para ambientes corporativos."
+      },
+      {
         "id": "idclass-controlid",
         "name": "ID Class Control iD",
         "description": "Relógio de ponto com tecnologia de identificação avançada.",
@@ -125,20 +139,6 @@
         "description": "Relógio de ponto intuitivo e de fácil operação.",
         "image": "/PRISMASUPERFACIL.png",
         "details": "Projeto ergonômico com interface amigável e integração com sistemas corporativos."
-      },
-      {
-        "id": "inner-ponto-4-topdata",
-        "name": "Inner Ponto 4 Topdata",
-        "description": "Relógio de ponto robusto para alta demanda.",
-        "image": "/INNERPONTO4.png",
-        "details": "Oferece precisão e confiabilidade, ideal para ambientes corporativos."
-      },
-      {
-        "id": "inner-rep-plus-topdata",
-        "name": "Inner Rep Plus Topdata",
-        "description": "Relógio de ponto com funcionalidades avançadas.",
-        "image": "/INNERREPPLUS.png",
-        "details": "Integração com sistemas de RH, gerenciamento de jornada e relatórios detalhados."
       }
     ]
   }

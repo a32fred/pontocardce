@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://pontocardce.com.br
+
+# Sitemaps
+Sitemap: https://pontocardce.com.br/sitemap.xml

@@ -23,7 +23,7 @@ export const Navbar = () => {
         <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
           <Link href="/">
             <Image
-              src="/logo.png"
+              src="/LOGO.png"
               alt="Controle de Acesso"
               width={160}
               height={32}
@@ -38,14 +38,14 @@ export const Navbar = () => {
 
   return (
     <div className="bg-[#202220]/80 backdrop-blur-sm fixed w-full top-0 z-50 shadow-md">
-           <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
+      <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="hover:opacity-80 transition-opacity">
           <Image
-            src="/logo.png"
+            src="/LOGO.png"
             alt="Controle de Acesso"
-            width={160}
-            height={32}
+            width={250}
+            height={70}
             priority
           />
         </Link>
@@ -61,7 +61,7 @@ export const Navbar = () => {
               {link.label}
             </Link>
           ))}
-          
+
           <Link
             href="https://wa.me/8532262933"
             target="_blank"
