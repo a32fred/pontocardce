@@ -43,10 +43,7 @@ const nextConfig = {
   },
 
 
-  siteUrl: 'https://pontocardce.com.br',
-  generateRobotsTxt: true,
-  // Configurações para hospedagem compartilhada
-  output: 'standalone', // Gera pasta independente com todas dependências
+
   trailingSlash: true, // Melhora compatibilidade com servidores estáticos
   productionBrowserSourceMaps: true, // Facilita debug em produção
   skipMiddlewareUrlNormalize: true,
