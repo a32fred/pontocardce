@@ -29,6 +29,7 @@ app
       process.exit(1);
     });
 
+    
     process.on("uncaughtException", (error) => {
       console.error("Erro inesperado:", error.message);
       process.exit(1);
