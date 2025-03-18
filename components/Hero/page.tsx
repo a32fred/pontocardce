@@ -7,7 +7,7 @@ export default function HeroSection() {
       {/* Imagem de Fundo */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/bghero.jpg" // Caminho da imagem na pasta public
+          src="/BGHERO.png" // Caminho da imagem na pasta public
           alt="Ilustração de soluções tecnológicas"
           fill
           style={{ objectFit: "cover" }} // Cobrir todo o espaço sem distorcer

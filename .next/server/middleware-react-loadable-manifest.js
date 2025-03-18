@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{}"
+self.__REACT_LOADABLE_MANIFEST='{"app/relogio-de-ponto/page.tsx -> @/components/WebcamWrapper":{"id":2016,"files":["static/chunks/16.d33a81551a4e9cb8.js"]}}';
