@@ -17,22 +17,6 @@
       "static/chunks/173-9cafc4acf7d7d31f.js",
       "static/chunks/app/layout-d0855ddaf590c86f.js"
     ],
-    "/catracas/page": [
-      "static/chunks/webpack-0b8bfb4ffd707165.js",
-      "static/chunks/4bd1b696-d2911c570548668b.js",
-      "static/chunks/517-3321378385505575.js",
-      "static/chunks/main-app-80407374bb6f413f.js",
-      "static/chunks/478-541dff64cf66977d.js",
-      "static/chunks/app/catracas/page-371c5cd4892a9c72.js"
-    ],
-    "/contato/page": [
-      "static/chunks/webpack-0b8bfb4ffd707165.js",
-      "static/chunks/4bd1b696-d2911c570548668b.js",
-      "static/chunks/517-3321378385505575.js",
-      "static/chunks/main-app-80407374bb6f413f.js",
-      "static/chunks/478-541dff64cf66977d.js",
-      "static/chunks/app/contato/page-abec378520532994.js"
-    ],
     "/page": [
       "static/chunks/webpack-0b8bfb4ffd707165.js",
       "static/chunks/4bd1b696-d2911c570548668b.js",
@@ -54,14 +38,6 @@
       "static/chunks/750-514622ece2e46d3a.js",
       "static/chunks/app/relogio-de-ponto/page-abf17d5247283a97.js"
     ],
-    "/sobre-nos/page": [
-      "static/chunks/webpack-0b8bfb4ffd707165.js",
-      "static/chunks/4bd1b696-d2911c570548668b.js",
-      "static/chunks/517-3321378385505575.js",
-      "static/chunks/main-app-80407374bb6f413f.js",
-      "static/chunks/478-541dff64cf66977d.js",
-      "static/chunks/app/sobre-nos/page-57130fd6ca69dc29.js"
-    ],
     "/softwares/page": [
       "static/chunks/webpack-0b8bfb4ffd707165.js",
       "static/chunks/4bd1b696-d2911c570548668b.js",
@@ -69,6 +45,22 @@
       "static/chunks/main-app-80407374bb6f413f.js",
       "static/chunks/478-541dff64cf66977d.js",
       "static/chunks/app/softwares/page-a59434c89d73c343.js"
+    ],
+    "/catracas/page": [
+      "static/chunks/webpack-0b8bfb4ffd707165.js",
+      "static/chunks/4bd1b696-d2911c570548668b.js",
+      "static/chunks/517-3321378385505575.js",
+      "static/chunks/main-app-80407374bb6f413f.js",
+      "static/chunks/478-541dff64cf66977d.js",
+      "static/chunks/app/catracas/page-371c5cd4892a9c72.js"
+    ],
+    "/sobre-nos/page": [
+      "static/chunks/webpack-0b8bfb4ffd707165.js",
+      "static/chunks/4bd1b696-d2911c570548668b.js",
+      "static/chunks/517-3321378385505575.js",
+      "static/chunks/main-app-80407374bb6f413f.js",
+      "static/chunks/478-541dff64cf66977d.js",
+      "static/chunks/app/sobre-nos/page-57130fd6ca69dc29.js"
     ],
     "/suporte/page": [
       "static/chunks/webpack-0b8bfb4ffd707165.js",
@@ -78,6 +70,14 @@
       "static/chunks/478-541dff64cf66977d.js",
       "static/chunks/9-d9562f8a7c15310e.js",
       "static/chunks/app/suporte/page-d870728e5bdd470b.js"
+    ],
+    "/contato/page": [
+      "static/chunks/webpack-0b8bfb4ffd707165.js",
+      "static/chunks/4bd1b696-d2911c570548668b.js",
+      "static/chunks/517-3321378385505575.js",
+      "static/chunks/main-app-80407374bb6f413f.js",
+      "static/chunks/478-541dff64cf66977d.js",
+      "static/chunks/app/contato/page-abec378520532994.js"
     ]
   }
 }
