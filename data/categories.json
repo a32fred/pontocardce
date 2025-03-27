@@ -1,5 +1,47 @@
 [
   {
+    "id": "controle-de-ponto",
+    "label": "Controle de Ponto",
+    "products": [
+      {
+        "id": "inner-rep-plus-topdata",
+        "name": "Inner Rep Plus Topdata",
+        "description": "Relógio de ponto com funcionalidades avançadas.",
+        "image": "/INNERREPPLUS.png",
+        "details": "Integração com sistemas de RH, gerenciamento de jornada e relatórios detalhados."
+      },
+      {
+        "id": "inner-ponto-4-topdata",
+        "name": "Inner Ponto 4 Topdata",
+        "description": "Relógio de ponto robusto para alta demanda.",
+        "image": "/INNERPONTO4.png",
+        "details": "Oferece precisão e confiabilidade, ideal para ambientes corporativos."
+      },
+      {
+        "id": "relogio-ponto-cartografico-topdata",
+        "name": "Relógio Ponto Cartográfico Topdata",
+        "description": "O Relógio Pontto da Topdata é um relógio de ponto barato, fácil de instalar e de usar.",
+        "image": "/relogio-ponto-cartografico.png",
+        "details": "O relógio Pontto é a solução ideal para pequenas empresas, locais remotos sem infraestrutura de informática ou mesmo residências. Além de marcar os horários de entrada e saída dos funcionários, o Pontto pode realizar outras tarefas como: controlar os horários dos turnos identificando atrasos e saídas antecipadas, acionar a sirene indicadora de início e fim de turnos."
+      },
+      {
+        "id": "leitor-facial-topdata-pro",
+        "name": "Leitor Facial Biométrico Topdata PRO",
+        "description": "Solução de reconhecimento facial com tecnologia anti-fraude 3D e integração multi-plataforma",
+        "image": "/leitor-facial-topdata.png",
+        "details": "Capacidade para 50.000 cadastros, reconhecimento em 0.3 segundos, certificações INMETRO e IP65, comunicação Wi-Fi/Ethernet/4G, atendimento à Portaria 1.510/2009"
+      },
+      {
+        "id": "sistema-ponto-cloud",
+        "name": "Sistema Ponto Cloud",
+        "description": "Gestão total de jornada na nuvem",
+        "image": "/sistema-cloud.jpg",
+        "details": "Integração com RH, relatórios automáticos, assinatura digital"
+      }
+    ]
+  },
+
+  {
     "id": "catracas",
     "label": "Catracas",
     "products": [

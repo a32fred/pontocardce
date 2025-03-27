@@ -1,11 +1,7 @@
 {
+  "/controle-de-ponto/page": "app/controle-de-ponto/page.js",
   "/_not-found/page": "app/_not-found/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/catracas/page": "app/catracas/page.js",
-  "/contato/page": "app/contato/page.js",
   "/page": "app/page.js",
-  "/relogio-de-ponto/page": "app/relogio-de-ponto/page.js",
-  "/sobre-nos/page": "app/sobre-nos/page.js",
-  "/softwares/page": "app/softwares/page.js",
-  "/suporte/page": "app/suporte/page.js"
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/relogio-de-ponto/page": "app/relogio-de-ponto/page.js"
 }

@@ -23,7 +23,9 @@ export default function HeroSection() {
           Tecnologia que Impulsiona Seu Negócio
           </h1>
           <p className="text-lg sm:text-xl lg:text-2xl text-[#0c4007] mb-8">
-          Transforme sua empresa com soluções inteligentes em controle de ponto e acesso.
+          Transforme sua empresa <br /> 
+          com soluções inteligentes <br />
+          em controle de ponto e acesso.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
@@ -35,7 +37,7 @@ export default function HeroSection() {
               Solicite um Orçamento!
             </Link>
             <Link
-              href="/sobre"
+              href="/sobre-nos"
               className="px-6 py-3 text-white border border-none bg-[#3E6B51] opacity-80 rounded-md hover:bg-[#177f0f] hover:text-white transition text-center"
             >
               Conheça Mais

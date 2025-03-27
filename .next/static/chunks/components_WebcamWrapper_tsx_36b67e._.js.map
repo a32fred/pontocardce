@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///home/zurtrah/pontocardce/components/WebcamWrapper.tsx"],"sourcesContent":["\"use client\";\nimport React from \"react\";\nimport ReactWebcam, { WebcamProps } from \"react-webcam\";\n\n// Define o valor padrão para o formato de screenshot com uma const assertion.\nconst defaultScreenshotFormat = \"image/jpeg\" as const;\n\n// Defina valores padrão para as props que estão faltando.\nconst defaultProps: Partial<WebcamProps> = {\n  disablePictureInPicture: false,\n  forceScreenshotSourceSize: false,\n  imageSmoothing: true,\n  mirrored: false,\n};\n\nexport default function WebcamWrapper(props: WebcamProps) {\n  const combinedProps = {\n    ...defaultProps,\n    ...props,\n    screenshotFormat: props.screenshotFormat || defaultScreenshotFormat,\n  };\n\n  return <ReactWebcam {...combinedProps} />;\n}\n"],"names":[],"mappings":";;;;AAEA;AAFA;;;AAIA,8EAA8E;AAC9E,MAAM,0BAA0B;AAEhC,0DAA0D;AAC1D,MAAM,eAAqC;IACzC,yBAAyB;IACzB,2BAA2B;IAC3B,gBAAgB;IAChB,UAAU;AACZ;AAEe,SAAS,cAAc,KAAkB;IACtD,MAAM,gBAAgB;QACpB,GAAG,YAAY;QACf,GAAG,KAAK;QACR,kBAAkB,MAAM,gBAAgB,IAAI;IAC9C;IAEA,qBAAO,6LAAC,6JAAA,CAAA,UAAW;QAAE,GAAG,aAAa;;;;;;AACvC;KARwB"}},
+    {"offset": {"line": 44, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}
