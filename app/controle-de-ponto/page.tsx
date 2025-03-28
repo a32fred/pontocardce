@@ -1,54 +1,50 @@
-// app/controle-de-ponto/page.tsx
-import { Suspense } from "react";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
+import { HeroSection } from './components/hero-section'
+import { Suspense } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
+import { MessageCircle } from "lucide-react";
+import WhyChooseUs from "./components/porque-nos";
 
 async function getControlePontoData() {
-  // Simula um delay de API
-  await new Promise((resolve) => setTimeout(resolve, 1000));
   const categoriesData = await import("@/data/categories.json");
   return categoriesData.default.find((cat) => cat.id === "controle-de-ponto");
 }
 
 export const metadata = {
-  title: "Sistema de Controle de Ponto | Sua Empresa",
-  description:
-    "Solução completa para gestão de jornada de trabalho com tecnologia biométrica",
+  title: "Controle de Ponto Inteligente | Sua Empresa",
+  description: "Solução completa com biometria facial, geolocalização e compliance trabalhista"
 };
 
 async function ProductsList() {
   const controlePontoCategory = await getControlePontoData();
 
-  if (!controlePontoCategory) {
-    return (
-      <div className="text-center text-red-500">Categoria não encontrada</div>
-    );
-  }
-
   return (
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-      {controlePontoCategory.products.map((product) => (
-        <div
-          key={product.id}
-          className="bg-white rounded-xl shadow-lg overflow-hidden animate-fade-in"
-        >
+      {controlePontoCategory?.products.map((product) => (
+        <div key={product.id} className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all">
           <div className="relative h-64 w-full">
             <Image
               src={product.image}
               alt={product.name}
               fill
-              className="object-cover"
+              className="object-cover rounded-t-xl"
               sizes="(max-width: 768px) 100vw, 33vw"
               priority
             />
+            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-4">
+              <h3 className="text-white text-xl font-bold">{product.name}</h3>
+            </div>
           </div>
 
           <div className="p-6">
-            <h3 className="text-xl font-bold text-[#32313e] mb-4">
-              {product.name}
-            </h3>
-            <p className="text-[#6b7280]">{product.description}</p>
+            <div className="flex flex-wrap gap-2 mb-4">
+              {['INMETRO'].map((tag) => (
+                <span key={tag} className="bg-[#177f0f]/10 text-[#177f0f] px-3 py-1 rounded-full text-sm">
+                  {tag}
+                </span>
+              ))}
+            </div>
+            <p className="text-[#6b7280] mb-4">{product.description}</p>
           </div>
         </div>
       ))}
@@ -60,12 +56,15 @@ function ProductsSkeleton() {
   return (
     <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       {[1, 2, 3].map((i) => (
-        <div key={i} className="bg-white rounded-xl shadow-lg overflow-hidden">
+        <div key={i} className="bg-white rounded-xl shadow-lg">
           <Skeleton className="h-64 w-full rounded-t-xl" />
           <div className="p-6">
             <Skeleton className="h-6 w-3/4 mb-4" />
-            <Skeleton className="h-4 w-full" />
-            <Skeleton className="h-4 w-2/3 mt-2" />
+            <div className="space-y-2">
+              <Skeleton className="h-4 w-full" />
+              <Skeleton className="h-4 w-2/3" />
+              <Skeleton className="h-4 w-1/2" />
+            </div>
           </div>
         </div>
       ))}
@@ -75,21 +74,17 @@ function ProductsSkeleton() {
 
 export default async function ControlePontoPage() {
   return (
-    <div className="min-h-screen bg-white">
-      {/* Seção Hero */}
-      <section className="bg-gradient-to-b from-[#177f0f]/10 to-white">
-        <div className="container mx-auto px-4 py-20 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-[#32313e] mb-6">
-            Controle de Ponto
-          </h1>
-        </div>
-      </section>
+    <div className="bg-white">
+      {/* Hero Section - agora com altura controlada pelo próprio componente */}
+      <HeroSection />
 
-      {/* Lista de Produtos com Suspense */}
-      <section className="py-20 bg-[#f9fafb]">
+      {/* Seções seguintes */}
+      <WhyChooseUs />
+
+      <section className="py-12 md:py-20 bg-[#f9fafb]">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-[#32313e] mb-16">
-            Nossas Soluções
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-[#32313e] mb-12 md:mb-16">
+            Nossas Soluções para Controle de Ponto
           </h2>
 
           <Suspense fallback={<ProductsSkeleton />}>
@@ -98,51 +93,34 @@ export default async function ControlePontoPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="relative py-24 bg-[#177f0f] text-white overflow-hidden">
-        {/* Efeito de gradiente dinâmico */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#125f0b] to-[#1a9f10] opacity-90"></div>
-
-        {/* Padrão geométrico */}
-        <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[url('/pattern.svg')] bg-repeat"></div>
-
+      <section className="relative py-16 md:py-24 bg-gradient-to-br from-[#22B917] to-emerald-900 text-white overflow-hidden">
+        <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10" />
         <div className="container mx-auto px-4 text-center relative z-10">
           <div className="max-w-3xl mx-auto">
-            {/* Título impactante */}
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 animate-fade-in-up">
-              Pronto para revolucionar seu controle de ponto?
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+              Transforme sua gestão de pessoal
             </h2>
 
-            {/* Texto explicativo */}
-            <p className="text-xl md:text-2xl text-white/90 mb-8 animate-fade-in-up delay-100">
-              Nossos especialistas estão prontos para criar uma solução sob
-              medida para sua empresa
+            <p className="text-lg md:text-xl lg:text-2xl text-emerald-100 mb-8 max-w-2xl mx-auto">
+              Tenha controle total da jornada de trabalho com nossa solução completa
             </p>
 
-            {/* Container do botão com efeito */}
-            <div className="animate-fade-in-up delay-200">
-              <Button
-                variant="secondary"
-                className="group bg-white text-[#177f0f] hover:bg-gray-50 px-8 py-5 text-lg md:text-xl 
-          rounded-xl shadow-2xl shadow-[#125f0b]/40 hover:shadow-[#125f0b]/60 transition-all
-          transform hover:scale-105"
+            <div className="mt-8 md:mt-10">
+              <a
+                href="https://wa.me/553199999999"
+                target="_blank"
+                rel="noopener"
+                className="inline-flex items-center gap-3 bg-white text-emerald-800 px-6 py-3 md:px-8 md:py-4 rounded-xl
+                         text-base md:text-lg font-semibold hover:bg-emerald-50 transition-all shadow-lg
+                         hover:shadow-xl hover:-translate-y-1"
               >
-                <span className="mr-3">📅</span>
-                Agendar Consultoria Gratuita
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path d="M13.025 1l-2.847 2.828 6.176 6.176h-16.354v3.992h16.354l-6.176 6.176 2.847 2.828 10.975-11z" />
-                </svg>
-              </Button>
+                <MessageCircle className="w-5 h-5 md:w-6 md:h-6" />
+                Conversar com Especialista
+              </a>
             </div>
 
-            {/* Texto de apoio */}
-            <p className="mt-6 text-sm md:text-base text-white/80 animate-fade-in-up delay-300">
-              ⏱️ Resposta em menos de 24h • ✅ Demonstração sem compromisso
+            <p className="mt-6 md:mt-8 text-sm text-emerald-200 opacity-90">
+              Resposta garantida
             </p>
           </div>
         </div>

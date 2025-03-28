@@ -30,7 +30,7 @@ export default function CatracasPage() {
       <section className="relative h-[70vh] flex items-center justify-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/bghero.jpg"
+            src="/BGHERO.png"
             alt="Controle de acesso"
             fill
             className="object-cover opacity-70"

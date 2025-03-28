@@ -112,7 +112,7 @@ export const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => (
           rel="noopener"
           className="bg-[#177f0f] text-white rounded-md px-4 py-2 hover:bg-[#125f0b] transition-colors text-center mt-2 text-sm"
         >
-          Solicitar Demonstração
+          Solicitar Orçamento
         </Link>
       </motion.div>
     )}

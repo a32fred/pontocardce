@@ -32,11 +32,11 @@
         "details": "Capacidade para 50.000 cadastros, reconhecimento em 0.3 segundos, certificações INMETRO e IP65, comunicação Wi-Fi/Ethernet/4G, atendimento à Portaria 1.510/2009"
       },
       {
-        "id": "sistema-ponto-cloud",
-        "name": "Sistema Ponto Cloud",
-        "description": "Gestão total de jornada na nuvem",
-        "image": "/sistema-cloud.jpg",
-        "details": "Integração com RH, relatórios automáticos, assinatura digital"
+        "id": "topponto-web",
+        "name": "TOPPONTO WEB Topdata",
+        "description": "Plataforma de gestão de ponto online",
+        "image": "/top-ponto.png",
+        "details": "Controle de ponto com geolocalização, escalas 12x36 ou crie sua própria escala. Integração com relógios biométricos e facial."
       }
     ]
   },
@@ -124,7 +124,7 @@
         "id": "topponto-web",
         "name": "TOPPONTO WEB Topdata",
         "description": "Plataforma de gestão de jornada online",
-        "image": "https://www.micromap.com.br/wp-content/uploads/2022/06/tela_topponto-scaled.jpg",
+        "image": "/top-ponto.png",
         "details": "Controle de ponto com geolocalização, escalas 12x36 e exportação para SPED. Integração com catracas e relógios biométricos."
       },
       {
@@ -149,39 +149,6 @@
         "details": "Módulos integrados de ponto eletrônico, banco de horas e gestão de EPIs. Compatível com dispositivos móveis."
       }
     ]
-  },
-  {
-    "id": "relogio-ponto",
-    "label": "Relógio de Ponto",
-    "products": [
-      {
-        "id": "inner-rep-plus-topdata",
-        "name": "Inner Rep Plus Topdata",
-        "description": "Relógio de ponto com funcionalidades avançadas.",
-        "image": "/INNERREPPLUS.png",
-        "details": "Integração com sistemas de RH, gerenciamento de jornada e relatórios detalhados."
-      },
-      {
-        "id": "inner-ponto-4-topdata",
-        "name": "Inner Ponto 4 Topdata",
-        "description": "Relógio de ponto robusto para alta demanda.",
-        "image": "/INNERPONTO4.png",
-        "details": "Oferece precisão e confiabilidade, ideal para ambientes corporativos."
-      },
-      {
-        "id": "idclass-controlid",
-        "name": "ID Class Control iD",
-        "description": "Relógio de ponto com tecnologia de identificação avançada.",
-        "image": "/IDCLASS.png",
-        "details": "Compatível com sistemas de controle de acesso, otimizando a gestão de ponto na empresa."
-      },
-      {
-        "id": "prisma-super-facil-henry",
-        "name": "Prisma Super Fácil Henry",
-        "description": "Relógio de ponto intuitivo e de fácil operação.",
-        "image": "/PRISMASUPERFACIL.png",
-        "details": "Projeto ergonômico com interface amigável e integração com sistemas corporativos."
-      }
-    ]
   }
+
 ]

@@ -48,8 +48,17 @@ export const DesktopNav = () => {
               </div>
             </motion.div>
           )}
+
         </div>
       ))}
+      <Link
+        href="https://wa.me/8532262933"
+        target="_blank"
+        rel="noopener"
+        className="bg-[#177f0f] text-white px-4 py-2 rounded-md hover:bg-[#125f0b] transition-colors text-sm"
+      >
+        Solicitar Orçamento
+      </Link>
     </nav>
   );
 };

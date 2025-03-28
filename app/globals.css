@@ -52,3 +52,13 @@ body {
 .delay-300 {
   animation-delay: 300ms;
 }
+
+.backdrop-blur-sm {
+  backdrop-filter: blur(8px);
+}
+
+video {
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}

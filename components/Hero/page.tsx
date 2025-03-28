@@ -1,50 +1,123 @@
+'use client'
+
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
+import { ChevronRight, Phone, ShieldCheck } from "lucide-react";
+import { useEffect, useState } from "react";
 
 export default function HeroSection() {
+
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(()=>{
+    setIsMounted(true)
+  },[])
+  
+  if (!isMounted) return null;
+
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Imagem de Fundo */}
-      <div className="absolute inset-0 z-0">
+      {/* Imagem de Fundo com Efeito Parallax */}
+      <motion.div 
+        className="absolute inset-0 z-0"
+        initial={{ scale: 1.1 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 1.2, ease: "easeOut" }}
+      >
         <Image
-          src="/BGHERO.png" // Caminho da imagem na pasta public
+          src="/BGHERO.png"
           alt="Ilustração de soluções tecnológicas"
           fill
-          style={{ objectFit: "cover" }} // Cobrir todo o espaço sem distorcer
-          quality={100} // Qualidade máxima
-          className="opacity-100" // Ajuste a opacidade conforme necessário
+          priority
+          quality={100}
+          className="object-cover object-center"
+          sizes="(max-width: 768px) 100vw, 100vw"
         />
-      </div>
+        <div className="absolute inset-0 bg-gradient-to-r from-[#2446229d]/90 to-[#3c9136]/30" />
+      </motion.div>
 
       {/* Conteúdo sobreposto */}
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#062004] mb-6">
-          Tecnologia que Impulsiona Seu Negócio
-          </h1>
-          <p className="text-lg sm:text-xl lg:text-2xl text-[#0c4007] mb-8">
-          Transforme sua empresa <br /> 
-          com soluções inteligentes <br />
-          em controle de ponto e acesso.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <Link
-              href="https://wa.me/8532262933"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 bg-[#177f0f] text-white rounded-md hover:bg-[#125f0b] transition text-center"
-            >
-              Solicite um Orçamento!
-            </Link>
-            <Link
-              href="/sobre-nos"
-              className="px-6 py-3 text-white border border-none bg-[#3E6B51] opacity-80 rounded-md hover:bg-[#177f0f] hover:text-white transition text-center"
-            >
-              Conheça Mais
-            </Link>
-          </div>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight drop-shadow-2xl"
+          >
+            Tecnologia que 
+            <span className="text-[#9dff8d]"> Impulsiona</span> 
+            <br />
+            Seu Negócio
+          </motion.h1>
+
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.4 }}
+          >
+            <p className="text-lg sm:text-xl lg:text-2xl text-white/90 mb-8 max-w-xl leading-relaxed">
+              Soluções completas em controle de ponto e acesso com:
+            </p>
+
+            <div className="flex flex-col gap-3 mb-8">
+              {[
+                "Biometria Facial Avançada",
+                "Geolocalização Inteligente",
+                "Conformidade Legal Total"
+              ].map((item, index) => (
+                <div key={index} className="flex items-center gap-3">
+                  <ShieldCheck className="w-5 h-5 text-[#9dff8d]" />
+                  <span className="text-white font-medium">{item}</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Link
+                  href="https://wa.me/8532262933"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-8 py-4 bg-[#177f0f] hover:bg-[#125f0b] text-white rounded-lg font-semibold flex items-center gap-2 transition-all"
+                >
+                  <Phone className="w-5 h-5" />
+                  Solicitar Orçamento
+                </Link>
+              </motion.div>
+
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Link
+                  href="/sobre-nos"
+                  className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-lg font-semibold flex items-center gap-2 transition-all"
+                >
+                  Ver Detalhes
+                  <ChevronRight className="w-5 h-5" />
+                </Link>
+              </motion.div>
+            </div>
+
+            <div className="mt-8 flex items-center gap-4 text-white/80 text-sm">
+              <div className="flex items-center gap-2">
+                <div className="w-3 h-3 bg-[#9dff8d] rounded-full animate-pulse" />
+                Online 24/7
+              </div>
+              <span>•</span>
+              <span>Atendimento Personalizado</span>
+            </div>
+          </motion.div>
         </div>
       </div>
+
+      {/* Elemento Decorativo */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#062004] to-transparent" />
     </section>
   );
 }

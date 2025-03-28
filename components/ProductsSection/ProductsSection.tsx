@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useState, useCallback } from "react";
-import { motion } from "framer-motion";
+import React, { useState, useCallback, useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import categoriesData from "@/data/categories.json";
 import "swiper/css";
@@ -38,45 +38,65 @@ const COLORS = {
   border: "border-gray-200",
 };
 
+
+
 const ProductCard: React.FC<{ product: Product; onSelect: (product: Product) => void }> = ({ product, onSelect }) => {
+
+  const ref = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start end", "end start"]
+  });
+
+  const rotateX = useTransform(scrollYProgress, [0, 1], [15, -15]);
+  const rotateY = useTransform(scrollYProgress, [0, 1], [-15, 15]);
+
   return (
-    <motion.div
-      className={`relative rounded-2xl overflow-hidden ${COLORS.background} border ${COLORS.border} 
-      shadow-lg transition-all duration-300 hover:shadow-xl group focus:outline-none focus:ring-2 focus:ring-emerald-300`}
-      whileHover={{
-        scale: 1.025,
-        boxShadow: "0 15px 30px -10px rgba(0, 0, 0, 0.1)",
-      }}
-      whileTap={{ scale: 0.98 }}
+    <div
+      ref={ref}
     >
-      <div className="relative w-full aspect-video overflow-hidden">
-        <Image
-          src={product.image}
-          alt={product.name}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="object-cover transition-transform duration-300 group-hover:scale-110"
-        />
-      </div>
+      <motion.div
+        className={`relative rounded-2xl overflow-hidden ${COLORS.background} border ${COLORS.border} 
+      shadow-lg transition-all duration-300 hover:shadow-xl group focus:outline-none focus:ring-2 focus:ring-emerald-300`}
+        whileHover={{
+          scale: 1.025,
+          boxShadow: "0 15px 30px -10px rgba(0, 0, 0, 0.1)",
+        }}
+        whileTap={{ scale: 0.98 }}
+        style={{
+          rotateX,
+          rotateY
+        }}
+      >
+        <div className="relative w-full aspect-video overflow-hidden">
+          <Image
+            src={product.image}
+            alt={product.name}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="object-cover transition-transform duration-300 group-hover:scale-110"
+          />
+        </div>
 
-      <div className="p-4 sm:p-5 space-y-3">
-        <h3
-          className={`text-lg sm:text-xl font-bold ${COLORS.text.primary} group-hover:text-emerald-600 transition-colors`}
-        >
-          {product.name}
-        </h3>
+        <div className="p-4 sm:p-5 space-y-3">
+          <h3
+            className={`text-lg sm:text-xl font-bold ${COLORS.text.primary} group-hover:text-emerald-600 transition-colors`}
+          >
+            {product.name}
+          </h3>
 
-        <p className={`${COLORS.text.secondary} text-sm line-clamp-3`}>{product.description}</p>
+          <p className={`${COLORS.text.secondary} text-sm line-clamp-3`}>{product.description}</p>
 
-        <button
-          onClick={() => onSelect(product)}
-          className={`w-full py-2 rounded-lg ${COLORS.accent.primary} text-white font-semibold 
+          <button
+            onClick={() => onSelect(product)}
+            className={`w-full py-2 rounded-lg ${COLORS.accent.primary} text-white font-semibold 
           transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-emerald-300`}
-        >
-          Ver Detalhes
-        </button>
-      </div>
-    </motion.div>
+          >
+            Ver Detalhes
+          </button>
+        </div>
+      </motion.div>
+    </div>
   );
 };
 
@@ -94,36 +114,56 @@ const ProductModal: React.FC<{ product: Product | null; onClose: () => void }> =
         initial={{ scale: 0.9, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ type: "spring", stiffness: 300, damping: 20 }}
-        className="w-full max-w-4xl bg-white rounded-2xl overflow-hidden grid md:grid-cols-2 shadow-2xl"
+        className="w-full max-w-4xl bg-white rounded-2xl overflow-hidden flex flex-col md:grid md:grid-cols-2 shadow-2xl max-h-[90vh]"
       >
         {/* Image Section */}
-        <div className="relative aspect-square">
-          <Image src={product.image} alt={product.name} fill className="object-cover" />
+        <div className="relative aspect-square md:aspect-auto md:h-full">
+          <Image
+            src={product.image}
+            alt={product.name}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
         </div>
 
         {/* Details Section */}
-        <div className="p-6 md:p-8 space-y-4">
-          <h2 className={`text-2xl md:text-3xl font-bold ${COLORS.text.primary}`}>{product.name}</h2>
+        <div className="p-6 md:p-8 flex flex-col overflow-hidden">
+          {/* Scrollable Content */}
+          <div className="flex-1 overflow-y-auto pr-2 -mr-2 scrollbar-thin scrollbar-thumb-[#177f0f]/20 scrollbar-track-transparent">
+            <h2 className={`text-2xl md:text-3xl font-bold ${COLORS.text.primary} mb-4`}>
+              {product.name}
+            </h2>
 
-          <p className={`${COLORS.text.secondary}`}>{product.description}</p>
+            <div className="space-y-6">
+              <p className={`${COLORS.text.secondary} leading-relaxed`}>
+                {product.description}
+              </p>
 
-          {product.details && (
-            <div>
-              <h3 className={`text-lg font-semibold ${COLORS.text.primary} mb-2`}>Detalhes</h3>
-              <p className={`${COLORS.text.muted}`}>{product.details}</p>
+              {product.details && (
+                <div>
+                  <h3 className={`text-lg font-semibold ${COLORS.text.primary} mb-3`}>
+                    Detalhes Técnicos
+                  </h3>
+                  <p className={`${COLORS.text.muted} leading-relaxed`}>
+                    {product.details}
+                  </p>
+                </div>
+              )}
             </div>
-          )}
+          </div>
 
-          <div className="flex space-x-3 pt-4 border-t border-gray-200">
+          {/* Fixed Buttons */}
+          <div className="flex space-x-3 pt-6 mt-6 border-t border-gray-200">
             <button
               onClick={onClose}
-              className={`flex-1 py-2.5 rounded-lg ${COLORS.accent.secondary} ${COLORS.text.primary} font-semibold transition-all`}
+              className={`flex-1 py-2.5 rounded-lg ${COLORS.accent.secondary} ${COLORS.text.primary} font-semibold transition-all hover:opacity-90`}
             >
               Fechar
             </button>
             <button
               onClick={() => window.open(`https://wa.me/558532262933?text=Olá, gostaria de saber mais sobre o produto ${product.name}`, '_blank')}
-              className={`flex-1 py-2.5 rounded-lg ${COLORS.accent.primary} text-white font-semibold transition-all duration-300 hover:scale-[1.02]`}
+              className={`flex-1 py-2.5 rounded-lg ${COLORS.accent.primary} text-white font-semibold transition-all hover:opacity-90`}
             >
               Comprar
             </button>

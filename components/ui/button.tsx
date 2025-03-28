@@ -21,6 +21,8 @@ export const Button = ({
 
   if (!isMounted) return null
 
+  const onClick = onclick;
+
   const baseStyles = 'rounded-lg font-medium transition-all duration-300'
   
   const variants = {
