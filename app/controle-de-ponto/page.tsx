@@ -1,9 +1,9 @@
 import Image from "next/image";
-import { HeroSection } from './components/hero-section'
+import { HeroSection } from './_components/hero-section'
 import { Suspense } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 import { MessageCircle } from "lucide-react";
-import WhyChooseUs from "./components/porque-nos";
+import WhyChooseUs from "./_components/porque-nos";
 
 async function getControlePontoData() {
   const categoriesData = await import("@/data/categories.json");

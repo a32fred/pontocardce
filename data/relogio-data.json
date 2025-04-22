@@ -1,0 +1,94 @@
+{
+  "hero": {
+    "title": "Revolução no Controle de Ponto",
+    "description": "Tecnologia biométrica com reconhecimento facial integrado à gestão de jornada",
+    "videoSrc": "/relogio-bg.mp4",
+    "videoPoster": "/relogio-poster.png"
+  },
+  "highlights": [
+    {
+      "icon": "👁️",
+      "title": "Biometria Facial",
+      "description": "Reconhecimento 3D com anti-fraude e liveness detection",
+      "borderColor": "border-purple-400"
+    },
+    {
+      "icon": "⚡",
+      "title": "Cloud Integrado",
+      "description": "Dados sincronizados em tempo real com RH Cloud",
+      "borderColor": "border-green-400"
+    },
+    {
+      "icon": "📊",
+      "title": "Analytics",
+      "description": "Relatórios customizáveis e dashboards inteligentes",
+      "borderColor": "border-blue-400"
+    }
+  ],
+  "products": {
+    "title": "Nossos Equipamentos",
+    "description": "Soluções completas para todos os tipos de negócio",
+    "items": [
+      {
+        "id": "inner-rep-plus-topdata",
+        "name": "Inner Rep Plus Topdata",
+        "description": "Relógio de ponto com funcionalidades avançadas.",
+        "image": "/INNERREPPLUS.png",
+        "features": [
+          "Integração com sistemas de RH",
+          "Gerenciamento de jornada",
+          "Relatórios detalhados"
+        ]
+      },
+      {
+        "id": "inner-ponto-4-topdata",
+        "name": "Inner Ponto 4 Topdata",
+        "description": "Relógio de ponto robusto para alta demanda.",
+        "image": "/INNERPONTO4.png",
+        "features": [
+          "Precisão e confiabilidade",
+          "Ideal para ambientes corporativos"
+        ]
+      },
+      {
+        "id": "leitor-facial-topdata-pro",
+        "name": "Leitor Facial Biométrico Topdata PRO",
+        "description": "Reconhecimento facial com tecnologia anti-fraude 3D",
+        "image": "/leitor-facial-topdata.png",
+        "features": [
+          "Capacidade para 50.000 cadastros",
+          "Reconhecimento em 0.3 segundos",
+          "Certificações INMETRO e IP65",
+          "Conectividade via Wi-Fi, Ethernet e 4G"
+        ]
+      },
+      {
+        "id": "relogio-ponto-cartografico-topdata",
+        "name": "Relógio Ponto Cartográfico Topdata",
+        "description": "Relógio de ponto barato, fácil de instalar e usar.",
+        "image": "/relogio-ponto-cartografico.png",
+        "features": [
+          "Ideal para pequenas empresas ou locais remotos",
+          "Controla horários e turnos com sirene integrada",
+          "Identifica atrasos e saídas antecipadas"
+        ]
+      }
+    ]
+  },
+  "demo": {
+    "title": "Experimente a Tecnologia",
+    "description": "Simulação interativa do reconhecimento facial (webcam requerida)"
+  },
+  "cta": {
+    "title": "Conformidade Total com a Lei",
+    "description": "Nossos sistemas atendem 100% às exigências da Portaria 1.510/2009",
+    "primaryButton": {
+      "href": "/contato",
+      "label": "Solicitar Demonstração"
+    },
+    "secondaryButton": {
+      "href": "/suporte",
+      "label": "Falar com Especialista"
+    }
+  }
+}

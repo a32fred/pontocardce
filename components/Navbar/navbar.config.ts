@@ -13,7 +13,7 @@ export const APP_NAV_LINKS: NavLink[] = [
     href: "/controle-de-ponto", 
     label: "Controle de Ponto",
     subItems: [
-      { href: "/relogio-de-ponto", label: "Relógio de Ponto" },
+      { href: "/controle-de-ponto/relogio-de-ponto", label: "Relógio de Ponto" },
       { href: "/leitor-facial", label: "Leitor Facial" },
       { href: "/sistema-de-ponto", label: "Sistema de Ponto" },
     ]
@@ -23,7 +23,7 @@ export const APP_NAV_LINKS: NavLink[] = [
     label: "Controle de Acesso",
     subItems: [
       { href: "/catracas", label: "Catracas" },
-      { href: "/inners-acessos", label: "Inners Acessos" },
+      { href: "/inners", label: "Inners Acessos" },
       { href: "/cancelas", label: "Cancelas" },
     ]
   },

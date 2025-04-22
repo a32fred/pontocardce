@@ -2,7 +2,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { useState } from "react";
-import { APP_NAV_LINKS, NAV_ANIMATION_VARIANTS, NavLink } from "./navbar.config";
+import { APP_NAV_LINKS, NavLink } from "./navbar.config";
 
 type MobileMenuProps = {
   isOpen: boolean;

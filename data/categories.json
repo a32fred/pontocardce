@@ -46,6 +46,81 @@
     "label": "Catracas",
     "products": [
       {
+        "id": "catracas-revolution-facial",
+        "name": "Catraca Revolution Facial Topdata",
+        "description": "Solução premium para controle de acesso com biometria facial e design robusto para alto fluxo",
+        "image": "/revolution-facial.jpg",
+        "features": [
+          "Reconhecimento facial com anti-fraude (0.2s) e múltiplos métodos de autenticação",
+          "Capacidade para 50 mil rostos e integração com sistemas via TCP/IP/SDK",
+          "Mecanismo inox AISI 304 resistente (3M+ ciclos) e display inteligente"
+        ],
+        "specs": [
+          "Dimensões: 1280x795mm (com braços) | Peso: 31kg",
+          "Armazena 15k usuários e 30k registros | Alimentação bivolt",
+          "Construção em aço inox e plástico reforçado para alto tráfego"
+        ],
+        "categories": [
+          "shoppings",
+          "hospitais",
+          "academias",
+          "condominios",
+          "empresas"
+        ]
+      },
+      {
+        "id": "catracas-fit-facial",
+        "name": "Catraca Fit Facial Topdata",
+        "description": "Solução multifuncional para controle de acesso com biometria facial e integração multi-tecnologia",
+        "image": "/fit-facial.jpg",
+        "features": [
+          "Reconhecimento facial com detecção de rosto vivo (0.2s)",
+          "Sistema antipânico com braço articulado opcional",
+          "Integração via TCP/IP e software de gerenciamento",
+          "Contador de giros com display LCD backlight"
+        ],
+        "specs": [
+          "Capacidade: 15 mil usuários / 30 mil registros",
+          "Alimentação: 100-240VAC ou 12VDC opcional",
+          "Consumo: 20.7W | Peso: 25kg",
+          "Mecanismo inox AISI 304 (3+ milhões de ciclos)"
+        ],
+        "categories": ["academias", "condominios", "escolas", "empresas"]
+      },
+      {
+        "id": "catraca-balcao-topdata",
+        "name": "Catraca Box Facial Topdata",
+        "description": "Solução premium para controle de acesso em áreas restritas com biometria facial e construção em aço inox AISI 304",
+        "image": "/box-facial.jpg",
+        "features": [
+          "Reconhecimento facial 0.2s com anti-spoofing e capacidade para 50k faces",
+          "Multi-autenticação: QR Code, cartões Prox/Mifare e coleta de visitantes",
+          "Mecanismo antipânico articulado e display Big Number para alta visibilidade"
+        ],
+        "specs": [
+          "Dimensões: 1265x1040x690mm (AxLxP) | Peso: 48kg",
+          "Alimentação: 100-240VAC (20.7W) ou 12VDC | TCP/IP 10/100Mbps",
+          "Durabilidade: 3M+ ciclos com braços inox e proteção IP54"
+        ],
+        "categories": ["empresas", "laboratorios", "datacenters", "condominios"]
+      },
+      {
+        "id": "catracas-hospitalares-topdata",
+        "name": "Catraca PNE",
+        "description": "A catraca PNE para cadeirantes oferece o conforto necessário ao usuário portador de necessidades especiais, sem deixar de garantir a segurança do seu empreendimento.",
+        "image": "/catraca-pne.png",
+        "features": [
+          "Catraca PNE com leitor de proximidade.",
+          "Catraca PNE com leitor smart card,  Mifare."
+        ],
+        "specs": [
+          "Pedestal em aço carbono com pintura epóxiinox",
+          "Tampa em plástico ABS de alta resistência",
+          "Consumo: 17W"
+        ],
+        "categories": ["hospitais"]
+      },
+      {
         "id": "fit4-topdata",
         "name": "Catraca FIT4 Topdata",
         "description": "Modelo econômico com braço único e leitor integrado",
@@ -67,18 +142,24 @@
         "details": "Dimensões reduzidas (300x300mm), integração com fechaduras elétricas e suporte para cartões MIFARE DESFire EV2."
       },
       {
-        "id": "idblock-balcao",
-        "name": "Catraca iDBlock Balcão Control iD",
-        "description": "Solução para atendimento com altura ajustável",
-        "image": "/IDBLOCKBALCAO.png",
-        "details": "Altura de 800mm a 1.2m, leitor de QR Code integrado e módulo facial opcional. Ideal para recepções corporativas."
-      },
-      {
-        "id": "idblock-pcd",
-        "name": "Catraca iDBlock PCD Control iD",
-        "description": "Modelo acessível com largura ampliada",
-        "image": "/IDBLOCKPCD.png",
-        "details": "Largura de 900mm, sinalização tátil e sensor de presença para cadeirantes. Compatível com cartões HID iCLASS SE."
+        "id": "catraca-expedidora-henry",
+        "name": "Catraca Expedidora Henry",
+        "description": "Solução integrada para controle de acesso com expedição automática de comandas em estabelecimentos comerciais",
+        "image": "/catraca-henry.jpg",
+        "features": [
+          "Expedição de comandas via sensor de proximidade",
+          "Capacidade para 130 comandas (9x7cm)",
+          "Sinalização visual e sonora de reposição",
+          "Travamento automático dos braços"
+        ],
+        "specs": [
+          "Alimentação: 14.5V/4.5A",
+          "Dimensões: 1810mm altura x 773mm profundidade x 670mm largura",
+          "Display: LCD 16x2 caracteres com backlight",
+          "Modo operacional: Liberação por sensor de movimento",
+          "Espessura comandas: 5.5mm"
+        ],
+        "categories": ["restaurantes", "estabelecimentos_comerciais"]
       },
       {
         "id": "lumen-advance",
@@ -93,26 +174,75 @@
     "id": "controle-acesso",
     "label": "Controle de Acesso",
     "products": [
+      
+      {
+        "id": "inner-acesso-biometrico",
+        "name": "Inner Acesso Biométrico Topdata",
+        "description": "Controlador de acesso compacto com múltiplos métodos de autenticação para ambientes hospitalares e corporativos.",
+        "image": "/inner-bio.jpg",
+        "features": [
+          "Autenticação por cartão Prox, biometria",
+          "Controle de acesso por horários e tabelas personalizáveis",
+          "Armazenamento de 15.000 usuários e 30.000 registros",
+          "Operação online/offline com comunicação TCP/IP/Wi-Fi"
+        ],
+        "specs": [
+          "Alimentação 12V DC (consumo 8W)",
+          "Comunicação: TCP/IP 10/100Mbps + Wi-Fi opcional",
+          "Capacidade: 3.000 digitais biométricas",
+          "Sensor anti-violência e saída relé para portas"
+        ],
+        "categories": ["inners"]
+      },
+      {
+        "id": "inner-acesso-2-qrcode",
+        "name": "Inner Acesso 2 QR Code Prox",
+        "description": "Controlador de acesso com leitor QR Code e cartão Prox para ambientes corporativos e hospitalares.",
+        "image": "/inner-qr-code.jpg",
+        "features": [
+          "Autenticação por QR Code e cartão Prox",
+          "15.000 usuários cadastrados e 30.000 registros",
+          "Servidor web embarcado para configuração",
+          "Operação online/offline via TCP/IP ou Wi-Fi (opcional)",
+          "Sensor de violação e saída relé para portas"
+        ],
+        "specs": [
+          "Leitores: QR Code + Prox 125 KHz/Mifare 13,56 MHz",
+          "Fonte: 12V DC (consumo 8W)",
+          "Dimensões: 84mm x 129mm x 42mm | 0,2kg",
+          "Temperatura operação: 0°C a 45°C",
+          "Acessórios opcionais: Cobertura externa, totem"
+        ],
+        "categories": ["inners"]
+      },
+      {
+        "id": "inner-acesso-2-botoeira",
+        "name": "Inner Acesso 2 Botoeira",
+        "description": "Controlador de acesso simplificado com acionamento por botão físico para liberação manual em ambientes internos ou externos.",
+        "image": "/inner-botoeira.jpg",
+        "features": [
+          "Acionamento instantâneo por botão físico",
+          "Integração com sistemas de controle de acesso existentes",
+          "Sensor anti-violência e saída relé para portas/cancelas",
+          "Servidor web embarcado para configuração básica",
+          "Operação online/offline via TCP/IP"
+        ],
+        "specs": [
+          "Acionamento exclusivo por botão (sem leitores biométricos ou Prox)",
+          "Fonte: 12V DC (consumo 8W)",
+          "Dimensões: 84mm x 129mm x 42mm | 0,2kg",
+          "Saída relé para liberação da porta",
+          "Entrada para sensor de porta e botão externo",
+          "Acessórios opcionais: Cobertura externa, totem"
+        ],
+        "categories": ["inners"]
+      },
       {
         "id": "inner-biometrico",
         "name": "Inner Acesso Topdata",
         "description": "Controlador com leitor ótico; prox; botoeira; qrcode",
         "image": "/INNERS.png",
         "details": "Capacidade para 10.000 digitais, 32 saídas de relé e interface web para configuração. Compatível com padrão O.S.A."
-      },
-      {
-        "id": "idaccess-pro",
-        "name": "iDAccess Control iD",
-        "description": "Controlador modular profissional",
-        "image": "/IDACESS.png",
-        "details": "Gerencia até 50.000 usuários, 64 grupos de acesso e 16 anti-passback. Suporta Wiegand 26/34 bits e entrada para sensor de porta."
-      },
-      {
-        "id": "idflex-ip65",
-        "name": "iDFlex IP65 Control iD",
-        "description": "Controlador resistente para ambientes críticos",
-        "image": "/IDFLEX.png",
-        "details": "Grau de proteção IP65, opera de -20°C a 60°C. Ideal para estacionamentos e áreas industriais."
       }
     ]
   },
@@ -128,27 +258,99 @@
         "details": "Controle de ponto com geolocalização, escalas 12x36 e exportação para SPED. Integração com catracas e relógios biométricos."
       },
       {
+        "id": "top-portaria-software",
+        "name": "TopPortaria PRO - Controle Inteligente",
+        "description": "Solução unificada para gestão de portarias com controle de ocupação e integração biométrica multissetorial",
+        "image": "/topportaria.png",
+        "features": [
+          "Controle de lotação em tempo real com limites configuráveis",
+          "Gestão completa de visitantes: cadastro, biometria e crachás RFID/QR Code",
+          "Integração nativa com catracas Topdata"
+        ],
+        "specs": [
+          "Compatível com: leitores biométricos, assinatura digital",
+          "Certificação LGPD | Suporte para múltiplas portarias simultâneas"
+        ],
+        "categories": ["hospitais", "empresas"]
+      },
+      {
+        "id": "software-ihx-hospitais",
+        "name": "Software IHX para Hospitais",
+        "description": "Solução integrada de controle de acesso hospitalar com gestão de visitas, colaboradores e refeitórios, conectada ao sistema de gestão hospitalar.",
+        "image": "/ihx-hospitais.png",
+        "features": [
+          "Controle de visitas a pacientes e acompanhantes",
+          "Gestão de acessos de colaboradores e terceiros",
+          "Módulo de refeitórios com relatórios detalhados",
+          "Integração em tempo real com sistema hospitalar",
+          "Monitoramento de acesso por setores/equipamentos"
+        ],
+        "specs": [
+          "Regras de acesso personalizáveis",
+          "Validação de documentos e EPIs",
+          "Controle anti-retorno (Anti-PassBack)"
+        ],
+        "categories": ["hospitais"]
+      },
+      {
+        "id": "ifitness-inspell",
+        "name": "iFitness - Inspell",
+        "description": "Sistema completo para gestão de academias com controle de acesso integrado, gestão financeira e módulos especializados em performance física",
+        "image": "/ifitness.png",
+        "features": [
+          "Gestão 360°: financeiro, CRM, treinos iCross e controle de acesso multi-catracas",
+          "Módulos especializados: avaliação física, app mobile e pagamento recorrente VINDI",
+          "Automação: alertas SMS/e-mail, biometria online e geração de crachás/boletos"
+        ],
+        "specs": [
+          "Arquitetura Firebird com backup cloud e licenciamento flexível (assinatura/compra)",
+          "Integração nativa com 20+ modelos de catracas e quiosques inteligentes",
+          "Dashboard analítico com métricas financeiras e performance de alunos"
+        ],
+        "categories": ["academias", "estúdios"]
+      },
+      {
+        "id": "icontrol-inspell",
+        "name": "iControl PRO - Inspell",
+        "description": "Plataforma unificada para automação de segurança com controle de acesso multissetorial e compliance regulatório",
+        "image": "/icontrol.png",
+        "features": [
+          "Gestão centralizada: pedestres, veículos e permanência em ambientes controlados",
+          "Módulos especializados: refeitório tarifado, biometria cloud e estacionamento inteligente",
+          "Monitoramento predial: mapas térmicos de ocupação e alertas em tempo real"
+        ],
+        "specs": [
+          "Arquitetura Firebird + Cloud | Backup automatizado com criptografia AES-256",
+          "Integração com 50+ modelos de catracas e controladores de acesso",
+          "Controle granular: 1M+ regras de acesso/configurações por usuário",
+          "Certificações: LGPD, CLT Artigo 253 | Suporte 24/7 prioritário"
+        ],
+        "categories": ["hospitais", "empresas"]
+      },
+      {
+        "id": "refcontrol-inspell",
+        "name": "RefControl - Inspell",
+        "description": "Solução líder para gestão inteligente de refeitórios corporativos com controle nutricional e financeiro integrado",
+        "image": "/refcontrol.png",
+        "features": [
+          "Controle tarifário flexível: valores, créditos e restrições por colaborador",
+          "Biometria cloud para até 10k usuários com integração folha de pagamento",
+          "Monitoramento nutricional: restrições alimentares e relatórios de consumo"
+        ],
+        "specs": [
+          "Arquitetura Firebird + módulo Web | Backup automatizado local/nuvem",
+          "Integração com 30+ modelos de catracas e sistemas RH (API/REST)",
+          "Controle granular: escalas de folga, lançamentos manuais auditáveis e CLT compliance"
+        ],
+        "categories": ["restaurantes"]
+      },
+      {
         "id": "rhid-controlid",
         "name": "RHiD Control iD",
         "description": "Software de gestão de acesso unificado",
         "image": "https://i.ytimg.com/vi/qVmNOk36cq4/maxresdefault.jpg",
         "details": "Controle multi-unidades, agendamento de acessos temporários e relatórios de movimentação em tempo real."
-      },
-      {
-        "id": "ihx-sistemas",
-        "name": "IHX Sistemas",
-        "description": "Solução completa para controle de acesso",
-        "image": "https://ihxsistemas.com.br/wp-content/uploads/2015/12/cropped-ihx_logo.png",
-        "details": "Gerenciar regras de acessos de qualquer lugar. A IHX Sistemas proporciona soluções profissionais em controle de acesso para atender às necessidades específicas de seu negócio."
-      },
-      {
-        "id": "inspell-sistemas",
-        "name": "INSPELL Sistemas",
-        "description": "Solução completa para RH e controle de acesso",
-        "image": "/logo_inspell-removebg-preview.png",
-        "details": "Módulos integrados de ponto eletrônico, banco de horas e gestão de EPIs. Compatível com dispositivos móveis."
       }
     ]
   }
-
 ]

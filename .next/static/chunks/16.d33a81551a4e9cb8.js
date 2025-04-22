@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[16],{2016:(e,r,t)=>{t.r(r),t.d(r,{default:()=>a});var s=t(5155);t(2115);var c=t(1244),n=t.n(c);let o={disablePictureInPicture:!1,forceScreenshotSourceSize:!1,imageSmoothing:!0,mirrored:!1};function a(e){let r={...o,...e,screenshotFormat:e.screenshotFormat||"image/jpeg"};return(0,s.jsx)(n(),{...r})}}}]);
-//# sourceMappingURL=16.d33a81551a4e9cb8.js.map

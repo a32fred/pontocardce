@@ -1,0 +1,35 @@
+{
+    "controleDePonto": [
+      {
+        "id": "topponto-web",
+        "name": "TOPPONTO WEB Topdata",
+        "description": "Plataforma de gestão de jornada online",
+        "image": "/top-ponto.png",
+        "details": "Controle de ponto com geolocalização, escalas 12x36 e exportação para SPED. Integração com catracas e relógios biométricos."
+      },
+      {
+        "id": "iponto-plus",
+        "name": "iPonto Plus",
+        "description": "Solução completa para gestão de frequência e controle de jornada, totalmente adequada à Portaria 671/2021 do MTP",
+        "image": "/ipontoplus.png",
+        "details": "Sistema de ponto eletrônico com aplicativo móvel (reconhecimento facial), Multiponto coletivo e marcação web. Inclui banco de horas, controle de EPIs, vales-transporte e exportação para folha de pagamento. Compatível com Windows, atende Portaria 671/2021 e oferece licenciamento por assinatura ou compra definitiva."
+      },
+      {
+        "id": "rhid-controlid",
+        "name": "RHiD Control iD",
+        "description": "Software de gestão de acesso unificado",
+        "image": "https://i.ytimg.com/vi/qVmNOk36cq4/maxresdefault.jpg",
+        "details": "Controle multi-unidades, agendamento de acessos temporários e relatórios de movimentação em tempo real."
+      }
+    ],
+    "controleDeAcesso": [
+      {
+        "id": "ihx-sistemas",
+        "name": "IHX Sistemas",
+        "description": "Solução completa para controle de acesso",
+        "image": "/ihx-sistemas.png",
+        "details": "Gerenciar regras de acessos de qualquer lugar. A IHX Sistemas proporciona soluções profissionais em controle de acesso para atender às necessidades específicas de seu negócio."
+      }
+    ]
+  }
+  

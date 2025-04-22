@@ -31,21 +31,21 @@ export default function ContatoPage(): JSX.Element {
     assunto: "",
     mensagem: ""
   });
-  
+
   const [errors, setErrors] = useState<FormErrors>({});
   const [submitting, setSubmitting] = useState<boolean>(false);
   const [submitStatus, setSubmitStatus] = useState<SubmitStatus>(null);
 
   const validateForm = (): FormErrors => {
     const newErrors: FormErrors = {};
-    
+
     if (!formData.nome.trim()) newErrors.nome = "Nome é obrigatório";
     if (!formData.email.trim()) newErrors.email = "Email é obrigatório";
     else if (!/^\S+@\S+\.\S+$/.test(formData.email)) newErrors.email = "Email inválido";
     if (!formData.telefone.trim()) newErrors.telefone = "Telefone é obrigatório";
     if (formData.assunto === "Selecione um assunto" || !formData.assunto) newErrors.assunto = "Selecione um assunto";
     if (!formData.mensagem.trim()) newErrors.mensagem = "Mensagem é obrigatória";
-    
+
     return newErrors;
   };
 
@@ -55,7 +55,7 @@ export default function ContatoPage(): JSX.Element {
       ...prev,
       [name]: value
     }));
-    
+
     // Clear error for this field when typing
     if (errors[name as keyof FormErrors]) {
       setErrors(prev => ({
@@ -68,28 +68,24 @@ export default function ContatoPage(): JSX.Element {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault();
     const newErrors = validateForm();
-    
+
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
       return;
     }
-    
+
     setSubmitting(true);
     setSubmitStatus("pending");
-    
+
     try {
-      // Simulando envio para API
-      await new Promise(resolve => setTimeout(resolve, 1500));
-      
-      // Implementação real:
-      // const response = await fetch('/api/contato', {
-      //   method: 'POST',
-      //   headers: { 'Content-Type': 'application/json' },
-      //   body: JSON.stringify(formData)
-      // });
-      
-      // if (!response.ok) throw new Error('Falha ao enviar');
-      
+      const response = await fetch('/api/contato', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) throw new Error('Falha ao enviar');
+
       setSubmitStatus("success");
       setFormData({
         nome: "",
@@ -110,7 +106,7 @@ export default function ContatoPage(): JSX.Element {
   return (
     <main className="bg-gray-900">
       {/* Hero Section */}
-      <section className="relative h-[50vh] flex items-center justify-center">
+      <section className="relative h-[50vh] flex items-center justify-center pt-32">
         <div className="absolute inset-0 z-0">
           <Image
             src="/contato-bg.jpg"

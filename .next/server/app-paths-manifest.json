@@ -1,7 +1,0 @@
-{
-  "/page": "app/page.js",
-  "/sobre-nos/page": "app/sobre-nos/page.js",
-  "/_not-found/page": "app/_not-found/page.js",
-  "/controle-de-ponto/page": "app/controle-de-ponto/page.js",
-  "/relogio-de-ponto/page": "app/relogio-de-ponto/page.js"
-}
